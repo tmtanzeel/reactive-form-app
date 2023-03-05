@@ -1,0 +1,15 @@
+Sibling's information:
+<br />
+
+<div [formGroup]="parentFormGroup">
+  <div formArrayName="siblingsArray">
+    <div *ngFor="let sibling of siblingsArray['controls']; let i = index">
+      <div [formGroupName]="i">
+        <input type="text" formControlName="siblingName" />
+        <input type="text" formControlName="siblingAge" />
+        <input type="text" formControlName="siblingOccupation" />
+      </div>
+    </div>
+  </div>
+</div>
+<button type="button" (click)="addMethod()">Add sibling</button>

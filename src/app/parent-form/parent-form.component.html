@@ -1,0 +1,19 @@
+<form [formGroup]="myBiodataForm" (ngSubmit)="onSubmit()">
+  <div formGroupName="name">
+    First Name:
+    <input type="text" formControlName="firstName" />
+    <br />
+    Last Name:
+    <input type="text" formControlName="lastName" />
+    <br />
+  </div>
+  Age:
+  <input type="text" formControlName="age" />
+  <br />
+  Gender:
+  <input type="text" formControlName="gender" />
+  <br />
+  <app-sibling-form [parentFormGroup]="myBiodataForm"></app-sibling-form>
+  <br />
+  <button>Submit</button>
+</form>

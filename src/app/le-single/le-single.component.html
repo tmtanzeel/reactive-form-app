@@ -1,0 +1,26 @@
+<form [formGroup]="leDetailsUpdateForm" (ngSubmit)="onSubmit()">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-4">
+        Legal Entity Number Details:
+        <app-entity-input-start-end-date
+          [parentFormGroup]="leDetailsUpdateForm"
+          [formArray]="leDetailsUpdateForm.controls['entityNumberGroup']"
+          [headerName]="'Legal Entity Number'"
+          [formControlNameString]="'entityNumber'"
+        ></app-entity-input-start-end-date>
+      </div>
+      <div class="col-md-4">
+        Legal Entity Name Details:
+        <button type="button" (click)="openScheduler()">Open</button>
+        <app-entity-input-start-end-date
+          [parentFormGroup]="leDetailsUpdateForm"
+          [formArray]="leDetailsUpdateForm.controls['entityNameArray']"
+          [headerName]="'Legal Entity Name'"
+          [formControlNameString]="'entityName'"
+        ></app-entity-input-start-end-date>
+      </div>
+    </div>
+  </div>
+  <button type="submit">Save</button>
+</form>

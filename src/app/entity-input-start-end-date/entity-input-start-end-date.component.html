@@ -1,0 +1,10 @@
+<div [formGroup]="parentFormGroup">
+  <div [formGroup]="formGroupDisplayed">
+    {{ headerName }}
+    <input type="text" formControlName="{{ formControlNameString }}" /><br />
+    {{ headerName }} Start Date:
+    <input type="text" formControlName="{{ startDateControlName }}" /><br />
+    {{ headerName }} End Date:
+    <input type="text" formControlName="{{ endDateControlName }}" />
+  </div>
+</div>
